@@ -7,14 +7,14 @@ KEY = ''
 SITE_URL = ''
 
 DATA_URLS = {
-    'product': 'oc_product',  # информация о товаре
+    'product': 'oc_product',  # информация о товаре  (price, product_id, uid все тут)
     'product_description': 'oc_product_description',  # информация о товаре
-    'product_to_category': 'oc_product_to_category',  # информация о товаре
+    'product_to_category': 'oc_product_to_category',  # информация о товаре и принадлежность к категории
     'product_to_store': 'oc_product_to_store',  # публикация в магазине
-    'product_to_multistore': 'oc_product_to_multistore',  # система складов
+    'product_to_multistore': 'oc_product_to_multistore',  # принадлежность товара к складам
     'product_to_layout': 'oc_product_to_layout',  # публикация в магазине
     'product_special': 'oc_product_special', # акционная цена
-    'multistore': 'oc_multistore'
+    'multistore': 'oc_multistore' # система складов
 
 }
 
