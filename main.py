@@ -193,5 +193,72 @@ print(put_product(159874))
  
 """
 
+"""
+oc_order = {
+    order_id: 2333  - id заказа
+    invoice_no /// не надо
+    invoice_prefix /// не надо
+    store_id: 0
+    store_name: // не надо
+    store_url: // не надо
+    customer_id: 3448 - id клиента в базе сайта
+    customer_group_id: 1 по умолчанию
+    firstname: имя
+    lastname: фамилия
+    email: имейл
+    telephone: телефон
+    fax: /// не надо
+    custom_field /// не надо
+    payment_firstname /// не надо
+    payment_lastname /// не надо
+    payment_company /// не надо
+    payment_address_1: адресс доставки клиента
+    payment_address_2 /// не надо
+    payment_city: Город
+    payment_postcode: почтовое отделение
+    payment_country: страна
+    payment_country_id /// не надо
+    payment_zone: регион
+    payment_zone_id; /// не надо
+    payment_address_format /// не надо
+    payment_custom_field /// не надо
+    payment_method: метод оплаты картой и т.д
+    payment_code: /// не надо
+    shipping_firstname /// не надо
+    shipping_lastname /// не надо
+    shipping_company /// не надо
+    shipping_address_1 /// не надо
+    shipping_address_2 /// не надо
+    shipping_city /// не надо
+    shipping_postcode /// не надо
+    shipping_country /// не надо
+    shipping_country_id /// не надо
+    shipping_zone /// не надо
+    shipping_zone_id /// не надо
+    shipping_address_format /// не надо
+    shipping_custom_field /// не надо
+    shipping_method: метод доставки 
+    shipping_code /// не надо
+    comment: комментарии
+    total: Итоговая сумма
+    order_status_id: статус товара
+    affiliate_id: /// не надо
+    commission /// не надо
+    marketing_id /// не надо
+    tracking /// не надо
+    language_id /// не надо
+    currency_id /// не надо
+    currency_code /// не надо
+    currency_value /// не надо
+    ip /// не надо
+    forwarded_ip /// не надо
+    user_agent /// не надо
+    accept_language /// не надо
+    date_added /// не надо
+    date_modified /// не надо
+    sent_to_1c: будет меняться с 1 на 0 где 1 это надо отправить заказ в 1с, после получения информации о заказе 1с меняет значение на 0
+    sent_to_sms: 0 - тестовый смс модуль
+}
 
+"""
 
