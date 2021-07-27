@@ -1,0 +1,125 @@
+Метод: POST
+index.php?route=exchange/order/get_orders_by_status
+
+В заголовках передаем: (username, key)
+username = название профиля API во вкладке API пользователи
+key = ключ соответственно
+
+В теле передаем 
+status_id = 1 (где 1 статус = Новый)
+
+
+Полученный 200 ответ :
+JSON
+{
+    "orders": [
+        {
+            "order_id": "1", // идентификатор заказа
+            "total": "85.0000", // Общая цена за весь оформленный товар
+            "order_status_id": "1", // статус заказа
+            "comment": "", // комментарий к заказу
+            "date_added": "2021-07-15 14:01:58", // дата создания
+            "date_modified": "2021-07-15 14:01:59", // дата последнего обновления
+            "language_id": "1",
+            "currency_id": "1",
+            "currency_code": "RUB",
+            "currency_value": "1.00000000",
+            "customer": {
+                "customer_id": "0",
+                "customer_group_id": "1",
+                "firstname": "qwe",
+                "lastname": "qeq",
+                "email": "weq@ewr.rt",
+                "telephone": "qweqwe",
+                "fax": "",
+                "custom_field": "[]"
+            },
+            "payment_info": {  // Информация о плательщике
+                "payment_firstname": "qwe",
+                "payment_lastname": "qeq",
+                "payment_company": "",
+                "payment_address_1": "qwewqeqe",
+                "payment_address_2": "",
+                "payment_city": "qweqweq",
+                "payment_postcode": "qweqweqw",
+                "payment_country": "Российская Федерация",
+                "payment_country_id": "176",
+                "payment_zone": "Еврейская АО",
+                "payment_zone_id": "2728",
+                "payment_address_format": "",
+                "payment_custom_field": "[]",
+                "payment_method": "Оплата при доставке",
+                "payment_code": "cod"
+            },
+            "shipping_info": { // Адрес доставки и контакты человека
+                "shipping_firstname": "qwe",
+                "shipping_lastname": "qeq",
+                "shipping_company": "",
+                "shipping_address_1": "qwewqeqe",
+                "shipping_address_2": "",
+                "shipping_city": "qweqweq",
+                "shipping_postcode": "qweqweqw",
+                "shipping_country": "Российская Федерация",
+                "shipping_country_id": "176",
+                "shipping_zone": "Еврейская АО",
+                "shipping_zone_id": "2728",
+                "shipping_address_format": "",
+                "shipping_custom_field": "[]",
+                "shipping_method": "Доставка с фиксированной стоимостью",
+                "shipping_code": "flat.flat"
+            },
+            "products": [ // список товаров в заказе
+                {
+                    "order_product_id": "1",
+                    "order_id": "1",
+                    "product_id": "30",
+                    "name": "Canon EOS 5D",
+                    "model": "Product 3",
+                    "quantity": "1",
+                    "price": "80.0000",
+                    "total": "80.0000",
+                    "tax": "0.0000",
+                    "reward": "200",
+                    "product_options": [
+                        {
+                            "order_option_id": "1",
+                            "order_id": "1",
+                            "order_product_id": "1",
+                            "product_option_id": "226",
+                            "product_option_value_id": "15",
+                            "name": "Select",
+                            "value": "Red",
+                            "type": "select"
+                        }
+                    ]
+                }
+            ],
+            "total_details": [ // Общая информация, здесь важна только стоимость доставки
+                {
+                    "order_total_id": "1",
+                    "order_id": "1",
+                    "code": "sub_total",
+                    "title": "Итого",
+                    "value": "80.0000",
+                    "sort_order": "1"
+                },
+                {
+                    "order_total_id": "2",
+                    "order_id": "1",
+                    "code": "shipping",
+                    "title": "Доставка с фиксированной стоимостью",
+                    "value": "5.0000",
+                    "sort_order": "3"
+                },
+                {
+                    "order_total_id": "3",
+                    "order_id": "1",
+                    "code": "total",
+                    "title": "Всего",
+                    "value": "85.0000",
+                    "sort_order": "9"
+                }
+            ]
+        }
+    ]
+}
